@@ -13,11 +13,14 @@ const Signup = () => {
     e.preventDefault();
     console.log(name, email, password);
     try {
-      const response = await axios.post("http://localhost:8052/api/saveUser", {
-        name,
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://emp-management-backend-nhg4.onrender.com/api/saveUser",
+        {
+          name,
+          email,
+          password,
+        },
+      );
       console.log(response.data);
       alert("User registration success");
       navigate("/signin");

@@ -13,7 +13,7 @@ export default function AddEmp() {
   const handlesubmit = async (s) => {
     s.preventDefault();
     const response = await axios.post(
-      "http://localhost:8052/emp/saveEmp",
+      "https://emp-management-backend-nhg4.onrender.com/emp/saveEmp",
       {
         name,
         email,
@@ -30,10 +30,10 @@ export default function AddEmp() {
     alert(response.data.message);
     console.log(response);
     setname("");
-    setemail("")
-    setsalary("")
-    setrole("")
-    setage("")
+    setemail("");
+    setsalary("");
+    setrole("");
+    setage("");
   };
 
   return (
@@ -59,7 +59,7 @@ export default function AddEmp() {
             <div className="form-group">
               <label>Email Address</label>
               <input
-              value={email}
+                value={email}
                 onChange={(s) => setemail(s.target.value)}
                 type="email"
                 placeholder="rahul@company.com"
@@ -72,7 +72,7 @@ export default function AddEmp() {
             <div className="form-group">
               <label>Job Role</label>
               <input
-              value={role}
+                value={role}
                 onChange={(s) => setrole(s.target.value)}
                 type="text"
                 placeholder="e.g. Developer"
@@ -82,7 +82,7 @@ export default function AddEmp() {
             <div className="form-group">
               <label>Monthly Salary</label>
               <input
-              value={salary}
+                value={salary}
                 onChange={(s) => setsalary(s.target.value)}
                 type="text"
                 placeholder="e.g. 50000"
@@ -94,7 +94,7 @@ export default function AddEmp() {
           <div className="form-group age-input">
             <label>Age</label>
             <input
-            value={age}
+              value={age}
               onChange={(s) => setage(s.target.value)}
               type="text"
               placeholder="e.g. 25"

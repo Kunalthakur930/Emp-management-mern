@@ -19,11 +19,14 @@ const ViewEmp = () => {
 
   const fetchEmployees = async () => {
     try {
-      const response = await axios.get("http://localhost:8052/emp/get", {
-        headers: {
-          Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+      const response = await axios.get(
+        "https://emp-management-backend-nhg4.onrender.com/emp/get",
+        {
+          headers: {
+            Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+          },
         },
-      });
+      );
       setEmployees(response.data);
     } catch (error) {
       console.log("Error fetching Employees", error);
@@ -33,11 +36,14 @@ const ViewEmp = () => {
   const deleteEmp = async (id) => {
     if (window.confirm("Are you sure you want to delete?")) {
       try {
-        await axios.delete(`http://localhost:8052/emp/delete/${id}`, {
-          headers: {
-            Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+        await axios.delete(
+          `https://emp-management-backend-nhg4.onrender.com/emp/delete/${id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+            },
           },
-        });
+        );
         fetchEmployees();
       } catch (error) {
         console.log("Delete error", error);
@@ -58,11 +64,15 @@ const ViewEmp = () => {
 
   const updateEmp = async () => {
     try {
-      await axios.put(`http://localhost:8052/emp/update/${editId}`, formData, {
-        headers: {
-          Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+      await axios.put(
+        `https://emp-management-backend-nhg4.onrender.com/emp/update/${editId}`,
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+          },
         },
-      });
+      );
       setEditId(null);
       // Resetting to correct fields
       setFormData({ name: "", email: "", salary: "", role: "", age: "" });
