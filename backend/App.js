@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 8052;
 const dotenv = require("dotenv");
 const express = require("express");
 const server = express();
@@ -10,6 +11,6 @@ server.use(cors());
 server.use("/api", require("./Routes/UserRoutes.js"));
 server.use("/emp", require("./Routes/EmpRoutes.js"));
 
-server.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
