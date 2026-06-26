@@ -1,0 +1,139 @@
+.view-container {
+  padding: 40px 5%;
+  background-color: #f8fafc;
+  min-height: calc(100vh - 70px);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.table-card {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+}
+
+.table-header {
+  padding: 25px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.table-header h2 {
+  font-size: 1.4rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.table-header p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Table Styling */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.emp-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.emp-table th {
+  background: #f8fafc;
+  padding: 15px 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.emp-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+.emp-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.role-badge {
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Action Buttons */
+.action-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit, .btn-delete {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-edit { background: #f0fdf4; color: #16a34a; }
+.btn-edit:hover { background: #16a34a; color: white; }
+
+.btn-delete { background: #fff1f2; color: #e11d48; }
+.btn-delete:hover { background: #e11d48; color: white; }
+
+/* Modal / Edit Form Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+}
+
+.modal-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.modal-grid input {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-save { background: #4f46e5; color: white; border: none; padding: 12px; border-radius: 8px; flex: 1; cursor: pointer; font-weight: 600; }
+.btn-cancel { background: #f1f5f9; color: #475569; border: none; padding: 12px; border-radius: 8px; flex: 1; cursor: pointer; font-weight: 600; }
+
+.no-data { text-align: center; padding: 40px; color: #94a3b8; }

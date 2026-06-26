@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
+
+.p-navbar {
+  background: #ffffff;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 6%;
+  border-bottom: 1px solid #f1f5f9;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.p-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* Logo Area */
+.p-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.p-logo-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #6366f1;
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+
+.p-logo h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.p-logo h2 span {
+  color: #6366f1;
+}
+
+/* Links Section */
+.p-links-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.p-nav-link {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.p-nav-link:hover {
+  background-color: #f5f7ff;
+  color: #6366f1;
+}
+
+/* Logout Button - Light Red Theme */
+.p-logout-action {
+  background-color: #fff1f2;
+  color: #e11d48;
+  border: 1px solid #ffe4e6;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.2s ease;
+}
+
+.p-logout-action:hover {
+  background-color: #e11d48;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.15);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .p-navbar {
+    height: auto;
+    padding: 15px 20px;
+  }
+  
+  .p-nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .p-links-wrapper {
+    width: 100%;
+    justify-content: center;
+    gap: 5px;
+  }
+}

@@ -1,0 +1,93 @@
+.about-container {
+  background-color: #f0f2f5; /* Light grey background for the page */
+  min-height: calc(100vh - 80px);
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-content-card {
+  background: #ffffff;
+  max-width: 850px; /* Locked width for better readability */
+  width: 100%;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Header Styling */
+.about-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-header h1 {
+  font-size: 2.2rem;
+  color: #1a202c;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #edf2f7;
+  margin-bottom: 35px;
+}
+
+/* Grid for Features */
+.about-section h2 {
+  font-size: 1.4rem;
+  color: #2d3748;
+  margin-bottom: 20px;
+  border-left: 4px solid #4f46e5;
+  padding-left: 15px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.feature-box h4 {
+  color: #4f46e5;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.feature-box p {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Objective Section */
+.objective-text {
+  background-color: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  color: #334155;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr; /* Stack boxes on mobile */
+  }
+  
+  .about-content-card {
+    padding: 25px;
+  }
+  
+  .about-header h1 {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+.welcome-wrapper {
+  min-height: calc(100vh - 70px);
+  background-color: #f8fafc; /* Very light slate background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.welcome-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  padding: 50px;
+  border-radius: 20px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+/* Header Section */
+.status-badge {
+  background: #ecfdf5;
+  color: #10b981;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.welcome-header h1 {
+  font-size: 2.8rem;
+  color: #1e293b;
+  margin: 20px 0 10px;
+}
+
+.welcome-header h1 span {
+  color: #6366f1;
+}
+
+.welcome-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* Action Cards Grid */
+.action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.action-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-color: #6366f1;
+}
+
+.icon-box {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.icon-box.add { background: #eef2ff; color: #6366f1; }
+.icon-box.view { background: #f0fdf4; color: #22c55e; }
+
+.action-card h3 {
+  color: #1e293b;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.action-card p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.action-link {
+  text-decoration: none;
+  color: #6366f1;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Footer Section */
+.welcome-footer {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 25px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.welcome-footer strong {
+  color: #475569;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .action-grid { grid-template-columns: 1fr; }
+  .welcome-card { padding: 30px 20px; }
+  .welcome-header h1 { font-size: 2rem; }
+}
